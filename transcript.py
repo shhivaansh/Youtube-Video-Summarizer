@@ -58,7 +58,7 @@ def generate_gemini_content(transcript_text, prompt):
     return response.text
 
 # Streamlit web app title
-st.title("YouTube Transcript to Summary Converter")
+st.title("YouTube Transcript to Detailed Notes Converter")
 
 # Input field to enter the YouTube video URL
 youtube_link = st.text_input("Enter YouTube Video Link:")
@@ -73,7 +73,7 @@ if youtube_link:
     st.image(f"http://img.youtube.com/vi/{video_id}/0.jpg", use_container_width=True)
 
 # Button to trigger the generation of detailed notes
-if st.button("Summary"):
+if st.button("Get Detailed Notes"):
     try:
         # Extract the transcript text from the YouTube video using the provided link and language
         transcript_text = extract_transcript_details(youtube_link, language)
