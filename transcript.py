@@ -13,7 +13,7 @@ from youtube_transcript_api.formatters import TextFormatter # For converting tra
 load_dotenv()  ## This loads all environment variables defined in the .env file
 
 # Configure Google Generative AI with the API key from environment variables
-genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
+genai.configure(api_key=st.secrets("GOOGLE_API_KEY"))
 
 # Define the prompt for summarizing the YouTube transcript
 prompt = """You are a highly skilled YouTube video summarizer with expertise in extracting key insights and important details from video transcripts. Your task is to carefully analyze the provided transcript of the video and produce a concise yet comprehensive summary. Focus on identifying the main ideas, critical moments, and key takeaways from the video content. The summary should be structured in bullet points, with each point highlighting a distinct aspect of the video.
