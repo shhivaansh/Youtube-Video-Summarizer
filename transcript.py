@@ -70,7 +70,7 @@ language = st.selectbox("Select Transcript Language", ["en", "hi", "es", "fr", "
 if youtube_link:
     video_id = youtube_link.split("=")[1]  # Extract video ID from the URL
     # Display the thumbnail image of the YouTube video using its video ID
-    st.image(f"http://img.youtube.com/vi/{video_id}/0.jpg", use_container_width=True)
+    st.image(f"http://img.youtube.com/vi/{video_id}/0.jpg", use_column_width=True)
 
 # Button to trigger the generation of detailed notes
 if st.button("Get Detailed Notes"):
@@ -83,7 +83,7 @@ if st.button("Get Detailed Notes"):
             summary = generate_gemini_content(transcript_text, prompt)
 
             # Display the detailed summary in the web app
-            st.markdown("## Summary:")  # Markdown header for the summary section
+            st.markdown("## Detailed Notes:")  # Markdown header for the summary section
             st.write(summary)  # Display the generated summary text
             
     except Exception as e:
