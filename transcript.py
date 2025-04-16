@@ -49,7 +49,7 @@ def extract_transcript_details(youtube_video_url, language='en'):
 # Function to generate content summary using Google Gemini Pro model
 def generate_gemini_content(transcript_text, prompt):
     # Initialize the Google Gemini Pro generative model
-    model = genai.GenerativeModel("gemini-pro")
+    model = genai.GenerativeModel("gemini-1.5-flash")
     
     # Generate content (summary) using the provided prompt and transcript text
     response = model.generate_content(prompt + transcript_text)
